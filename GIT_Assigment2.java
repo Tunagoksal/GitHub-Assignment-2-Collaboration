@@ -20,5 +20,25 @@ public class GIT_Assigment2 {
             System.out.print(arr1[i] + " ");
         }
 
-    }   
+    }
+    
+    public int sumOfEvenNums(int[] arr){
+        int evenSum = 0;
+
+        for (int i = 0; i < arr.length; i+=2) {
+
+            evenSum += arr[i];
+        }
+        return evenSum;
+    }
+
+    public int sumOfOddNums(int[] arr){
+        int oddSum = 0;
+
+        for (int i = 1; i < arr.length; i+=2) {
+
+            oddSum += arr[i];
+        }
+        return oddSum;
+    }
 }
