@@ -41,4 +41,28 @@ public class GIT_Assigment2 {
         }
         return oddSum;
     }
+
+    //Returns the minimum integer of a given array
+    public static int minInteger( int[] arr) {
+        int currentMin = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < currentMin) {
+                currentMin = arr[i];
+            }
+        }
+        return currentMin;
+    }
+
+    //Returns the maximum integer of a given array
+    public static int maxInteger( int[] arr) {
+        int currentMax = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > currentMax) {
+                currentMax = arr[i];
+            }
+        }
+        return currentMax;
+    }
 }
