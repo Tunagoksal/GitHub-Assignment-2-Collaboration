@@ -10,13 +10,13 @@ public class arrayMaker {
         this.arr= new int[arraySize];
     }
 
-    public void makeArray(){
+    public int[] makeArray(){
         for(int i =0;i<this.arraySize;i++){
             this.arr[i]=random.nextInt(0,101);
         }
+        return arr;
     }
 
 
-    
 
 }
