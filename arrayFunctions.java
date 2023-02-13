@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class GIT_Assigment2 {
+public class arrayFunctions {
 
     public static int[] createArray(int length){
         int[] arr = new int[length];
@@ -12,6 +12,7 @@ public class GIT_Assigment2 {
         return arr;
     }
 
+    //returns the avarage of the numbers in the array
     public static int getAverage(int[] arr){
         int sum = 0;
         int average = 0;
@@ -23,6 +24,7 @@ public class GIT_Assigment2 {
         return average;
     }
 
+    // returns the each numbers difference from the avarage of the array
     public static int[] displayDifferenceFromAverage(int[] arr){
         int average = getAverage(arr);
         int[] arr1 = new int[arr.length];
@@ -33,6 +35,7 @@ public class GIT_Assigment2 {
         return arr1;
     }
     
+    // returns the sum of even indexed numbers of the array
     public static int sumOfEvenNums(int[] arr){
         int evenSum = 0;
 
@@ -42,6 +45,7 @@ public class GIT_Assigment2 {
         return evenSum;
     }
 
+    // returns the sum of odd indexed numbers of the array
     public static int sumOfOddNums(int[] arr){
         int oddSum = 0;
 
