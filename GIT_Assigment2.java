@@ -1,6 +1,18 @@
+import java.util.Random;
+
 public class GIT_Assigment2 {
 
-    public int getAverage(int[] arr){
+    public static int[] createArray(int length){
+        int[] arr = new int[length];
+        Random random = new Random();
+
+        for(int i =0; i<length; i++){
+            arr[i] = random.nextInt(0,101);
+        }
+        return arr;
+    }
+
+    public static int getAverage(int[] arr){
         int sum = 0;
         int average = 0;
 
@@ -11,39 +23,36 @@ public class GIT_Assigment2 {
         return average;
     }
 
-    public void displayDifferenceFromAverage(int[] arr){
+    public static int[] displayDifferenceFromAverage(int[] arr){
         int average = getAverage(arr);
         int[] arr1 = new int[arr.length];
 
         for(int i=0; i<arr.length; i++){
             arr1[i] = arr[i] - average;
-            System.out.print(arr1[i] + " ");
         }
-
+        return arr1;
     }
     
-    public int sumOfEvenNums(int[] arr){
+    public static int sumOfEvenNums(int[] arr){
         int evenSum = 0;
 
         for (int i = 0; i < arr.length; i+=2) {
-
             evenSum += arr[i];
         }
         return evenSum;
     }
 
-    public int sumOfOddNums(int[] arr){
+    public static int sumOfOddNums(int[] arr){
         int oddSum = 0;
 
         for (int i = 1; i < arr.length; i+=2) {
-
             oddSum += arr[i];
         }
         return oddSum;
     }
 
     //Returns the minimum integer of a given array
-    public static int minInteger( int[] arr) {
+    public static int minInteger(int[] arr) {
         int currentMin = arr[0];
 
         for (int i = 1; i < arr.length; i++) {
@@ -55,7 +64,7 @@ public class GIT_Assigment2 {
     }
 
     //Returns the maximum integer of a given array
-    public static int maxInteger( int[] arr) {
+    public static int maxInteger(int[] arr) {
         int currentMax = arr[0];
 
         for (int i = 1; i < arr.length; i++) {
