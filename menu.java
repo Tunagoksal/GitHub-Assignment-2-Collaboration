@@ -3,8 +3,25 @@ import java.util.Scanner;
 public class menu {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.print("Input the array length: ");
-        int length = in.nextInt();
+        boolean validArrayLength=false;
+        int length=0;
+        while(!validArrayLength){
+            System.out.print("Input the array length: ");
+            if(in.hasNextInt()){
+                length=in.nextInt();
+                if(length<=0){
+                    System.out.println("Array length must be a positive integer. Try again!");
+                }
+                else{
+                 validArrayLength=true;
+                    in.nextLine();
+                }
+            }
+            else{
+                in.nextLine();
+                System.out.println("Array length must be a positive integer. Try again!");
+            }
+        }
         int [] array = arrayFunctions.createArray(length);
         System.out.println("Here is your array: " + Arrays.toString(array));
         int choice = 0;
@@ -44,6 +61,7 @@ public class menu {
                     System.out.println("Sum of the even index elements is " + arrayFunctions.sumOfEvenNums(array));
                 }
                 else if (choice == 7){
+                    System.out.println("You exited the menu. Have a nice day!");
                 }  
                 else {
                     System.out.println("Your input is not valid. Please input a number between 1 and 7.");
